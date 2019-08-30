@@ -4,15 +4,17 @@ def merge(left_side, right_side):
     array = []
     left = 0
     right = 0
-    while left < len(left_side) or right < len(right_side):
-        left_el = left_side[left] if left < len(left_side) else None
-        right_el = right_side[right] if right < len(right_side) else None
-        if right_el is None or (left_el is not None and left_el < right_el):
+    while left < len(left_side) and right < len(right_side):
+        left_el = left_side[left]
+        right_el = right_side[right]
+        if left_el < right_el:
             array.append(left_el)
             left += 1
-        elif right_el is not None:
+        else:
             array.append(right_el)
             right += 1
+    array += left_side[left:]
+    array += right_side[right:]
     return array
 
 
