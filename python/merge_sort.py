@@ -1,3 +1,4 @@
+
 def merge(left_side, right_side):
     array = []
     left = 0
@@ -17,8 +18,7 @@ def merge(left_side, right_side):
 
 
 def sort(array):
-    if (len(array) == 1):
-        return array
+    if (len(array) == 1): return array
     mid = len(array) // 2
     left_side = sort(array[:mid])
     right_side = sort(array[mid:])
