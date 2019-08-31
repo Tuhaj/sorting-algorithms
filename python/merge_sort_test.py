@@ -5,22 +5,28 @@ from merge_sort import merge
 class TestMergeSort(unittest.TestCase):
     """run with: python -m unittest merge_sort_test.py"""
     def test_if_sorted(self):
-        array = [4,6,2,4,1]
-        sorted_array = array.copy()
-        sorted_array.sort()
-        self.assertEqual(sort(array), sorted_array)
+        list = [4,6,2,4,1]
+        sorted_list = list.copy()
+        sorted_list.sort()
+        self.assertEqual(sort(list), sorted_list)
 
-    def test_if_sorted_for_different_array(self):
-        array = [8,7,6,5,4,3,2,1]
-        sorted_array = array.copy()
-        sorted_array.sort()
-        self.assertEqual(sort(array), sorted_array)
+    def test_if_sorted_for_different_list(self):
+        list = [8,7,6,5,4,3,2,1]
+        sorted_list = list.copy()
+        sorted_list.sort()
+        self.assertEqual(sort(list), sorted_list)
 
-    def test_on_small_array(self):
-        array = [2,1]
-        sorted_array = array.copy()
-        sorted_array.sort()
-        self.assertEqual(sort(array), sorted_array)
+    def test_two_element_list(self):
+        list = [2,1]
+        sorted_list = list.copy()
+        sorted_list.sort()
+        self.assertEqual(sort(list), sorted_list)
+
+    def test_single_element_list(self):
+        list = [1]
+        sorted_list = list.copy()
+        sorted_list.sort()
+        self.assertEqual(sort(list), sorted_list)
 
 
     def test_merge(self):
